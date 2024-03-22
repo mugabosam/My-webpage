@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        /* Center the form on the page */
+        form {
+            margin: 0 auto;
+            width: 400px;
+            padding: 1em;
+            border: 1px solid #ff7200;
+            border-radius: 1em;
+            background-color: antiquewhite;
+        }
+
+        /* Style input fields */
+        input[type="text"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #999;
+        }
+
+        /* Highlight focused input fields */
+        input:focus,
+        select:focus {
+            border-color: #000;
+        }
+
+        /* Add space for multiline text fields (textarea) */
+        textarea {
+            vertical-align: top;
+            height: 5em;
+        }
+
+        /* Align buttons with text fields */
+        .button {
+            padding-left: 90px; /* Same size as label elements */
+        }
+
+        /* Add some margin to buttons */
+        button {
+            margin-left: 0.5em;
+        }
+        table {
+            width: 100%;
+            border-collapse:collapse ;
+        }
+        th, td {
+            border: 1px solid;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        Username:
+        <input type="text" id="username" name="username" required>
+
+        Password:
+        <input type="password" id="password" name="password" required>
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+        <label for="department">Department:</label>
+        <select id="department" name="department">
+            <option value="CS">Computer Science</option>
+            <option value="CE">Computer Engineering</option>
+            <option value="IT">Information Technology</option>
+            <option value="IS">Information Systems</option>
+        </select>
+
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments"></textarea>
+
+        <div class="button">
+            <button type="submit">Submit</button>
+        </div>
+
+    <table>
+       <tr>
+        <th>subject</th>
+        <th>math</th>
+        <th>phy</th>
+        <th>chem</th>
+        <th>elec</th>
+       </tr>
+       <tr>
+        <td>names</td>
+        <td>joj</td>
+        <td>bye</td>
+        <td>dev</td>
+        <td>big</td>
+       </tr>
+       <tr>
+        <td>names</td>
+        <td>joj</td>
+        <td>bye</td>
+        <td>dev</td>
+        <td>big</td>
+       </tr>
+       <tr>
+        <td>names</td>
+        <td>joj</td>
+        <td>bye</td>
+        <td>dev</td>
+        <td>big</td>
+       </tr>
+       <tr>
+        <td>names</td>
+        <td>joj</td>
+        <td>bye</td>
+        <td>dev</td>
+        <td>big</td>
+       </tr>
+    </table>
+    <abbr title="sir sam">ss</abbr>
+    <ul type="bullet">
+        <li>boy</li>
+        <li>girl</li>
+    </ul>
+</form>
+</body>
+</html>

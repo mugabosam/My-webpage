@@ -1,0 +1,134 @@
+body{
+  margin: 0;
+  padding: 0;
+  height: 800px;
+  font-family: sans-serif;
+  background: bisque;
+}
+.sign-up{
+  width: 400px;
+  box-shadow: 0 0 30px 0 rgba(0,0,0,0.3);
+  background: #fff;
+  padding: 20px;
+  margin: 8% auto 0;
+  text-align: center;
+  float: center;
+}
+.sign-up h1{
+  color: #1c8adb;
+  margin-bottom: 10px;
+}
+.input-box{
+  border-radius: 20px;
+  padding: 6px;
+  margin: 30px 0;
+  width: 100%;
+  border: 1px solid #999;
+  outline: none;
+}
+button{
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 15px;
+  margin: 10px 0;
+  border: none;
+  cursor: pointer;
+}
+button:hover{
+  color: #071629;
+}
+.signup-btn{
+  background: #1c8adb;
+}
+.signin-btn{
+  background: #21afde;
+}
+a{
+  text-decoration: none;
+}
+hr{
+  margin-top: 20px;
+  width: 80%;
+}
+.or{
+  background: #fff;
+  width: 30px;
+  margin: -19px auto 10px;
+}
+img{
+  width: 50px;
+  margin-top: -15%;
+}
+.content {
+  min-height: 100vh;
+  padding-bottom: 80px;
+}
+footer {
+  background: #333; /* Dark background color */
+  color: white;
+  padding: 30px 0; /* Increased top and bottom padding */
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+
+.ft-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Add space between the sections */
+  align-items: center; /* Center items vertically */
+}
+
+p {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.social-media a,
+.apps a {
+  display: inline-block;
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease; /* Smooth transition for link color */
+}
+
+.social-media img,
+.apps img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid white;
+  transition: transform 0.3s ease;
+}
+
+.social-media img:hover,
+.apps img:hover {
+  transform: scale(1.2);
+}
+
+.additional-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.additional-info p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.8; /* Slightly reduce opacity for a subtle effect */
+}
+
+/* Add a hover effect for the entire footer */
+footer:hover {
+  background: linear-gradient(to right, #3498db, #2c3e50);
+}

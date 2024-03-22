@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.logo{
+    color: brown;
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    box-shadow: 0 2px 14px rgba(159, 14, 14, 0.8);
+}
+body{
+    color: bisque;
+    width: 100%;
+}
+body:hover {
+    font-family: Arial, sans-serif;
+    color: aliceblue;
+}
+
+main {
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 20px;
+}
+
+section {
+width: 100%;
+max-width: 600px;
+margin-bottom: 20px;
+box-shadow: 0 20px 14px rgba(159, 14, 14, 0.8);
+border-radius: 5px;
+padding: 20px;
+}
+
+section h2 {
+align-items: center;
+padding-left: 150px;
+}
+
+section form {
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-top: 50px;
+margin-top: 10px;
+}
+
+section label {
+margin-bottom: 10px;
+}
+
+section input[type="text"], section input[type="tel"]{
+    width: 220px;
+    font-family: sans-serif;
+    text-align: center;
+    color: #ff7200;
+    font-size: 22px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 2px;
+}
+
+section input[type="number"] {
+    width: 220px;
+    font-family: sans-serif;
+    text-align: center;
+    color: #ff7200;
+    font-size: 22px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 2px;
+}
+
+section button[type="submit"] {
+width: 220px;
+font-family: sans-serif;
+text-align: center;
+color: #ff7200;
+font-size: 22px;
+background-color: #fff;
+border-radius: 10px;
+margin: 2px;
+}
+
+section button[type="submit"]:hover {
+background-color: #3e8e41;
+cursor: pointer;
+}
+
+footer {
+background-color: #071629;
+padding: 80px;
+margin-top: 80px;
+text-align: center;
+}
+
+@media (max-width: 768px) {
+main {
+flex-direction: column;
+}
+
+Copy
+section {
+    width: 100%;
+    max-width: 100%;
+}
+}

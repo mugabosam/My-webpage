@@ -1,0 +1,146 @@
+body {
+  /*background-image: url(./imgs/pcover.jpg);*/
+  background-size: cover;
+  background-color: bisque;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  color: #333; /* Set a default text color for better readability */
+}
+
+.pros {
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center text */
+}
+
+.pros-title {
+  padding: 2rem;
+  font-weight: 300;
+  line-height: 40px;
+}
+
+.pros-title .secondary-color {
+  font-weight: 700;
+  color: #3498db; /* Use a secondary color for emphasis */
+}
+
+.pros-block {
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap to the next line */
+  justify-content: space-around; /* Distribute cards evenly */
+}
+
+.pros-card {
+  width: 10%;
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ecf0f1; /* Add a subtle border */
+  border-radius: 5px; /* Add rounded corners */
+  background-color: #fff; /* White background for cards */
+}
+
+.pros img {
+  border-radius: 50%; /* Correct the typo and make the image fully rounded */
+  max-width: 100%;
+  height: auto; /* Maintain aspect ratio */
+}
+.pros img:hover{
+  transform: scale(1.2);
+
+}
+
+.pros-card h3 {
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  background-color: #ecf0f1; /* Add a background color to headings */
+  padding: 0.5rem;
+  border-radius: 4px; /* Add rounded corners */
+}
+
+.pros-card h2 {
+  font-family: sans-serif;
+  font-size: medium;
+  color: #333;
+}
+
+.pros-card p {
+  font-style: italic;
+  font-size: 16px;
+}
+
+footer {
+  background: #333; /* Dark background color */
+  color: white;
+  padding: 30px 0; /* Increased top and bottom padding */
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+
+.ft-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Add space between the sections */
+  align-items: center; /* Center items vertically */
+}
+
+p {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.social-media a,
+.apps a {
+  display: inline-block;
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease; /* Smooth transition for link color */
+}
+
+.social-media img,
+.apps img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid white;
+  transition: transform 0.3s ease;
+}
+
+.social-media img:hover,
+.apps img:hover {
+  transform: scale(1.2);
+}
+
+.additional-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.additional-info p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.8; /* Slightly reduce opacity for a subtle effect */
+}
+
+/* Add a hover effect for the entire footer */
+footer:hover {
+  background: linear-gradient(to right, #3498db, #2c3e50);
+}

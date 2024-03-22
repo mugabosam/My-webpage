@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Money Account</title>
+    <link rel="stylesheet" href="styless.css">
+    <style>
+        /* Add your additional styles here */
+        #cartItems {
+            list-style: none;
+            padding: 0;
+        }
+
+        #paymentForm {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body background="c:\Users\popes\Downloads\IMG.jpg">
+    <div class="icon">
+        <h2 class="logo">SamDoes</h2>
+    </div>
+    <main>
+        <section id="send-money">
+            <h2>Add To cart</h2>
+            <hr>
+            <form id="paymentForm">
+                <label for="phone-number">productName:</label>
+                <input type="text" id="tel" name="productName" required><br>
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" name="amount" required><br>
+                <button type="button" onclick="addToCart()">Add to Cart</button>
+                <button type="button" onclick="buyItems()">Buy Items</button>
+            </form>
+        </section>
+    </main>
+    
+    <div class="container">
+        <div class="cart">
+            <h2>Shopping Cart</h2>
+            <ul id="cartItems"></ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Mobile Money Account</p>
+    </footer>
+
+    <script>
+        function addToCart() {
+            var productName = document.getElementById('tel').value;
+            var amount = document.getElementById('amount').value;
+
+            if (productName && amount) {
+                var cartItem = "Payment - productName: " + productName + ", Amount: $" + amount;
+
+                var cartItemsElement = document.getElementById('cartItems');
+                var listItem = document.createElement('li');
+                listItem.appendChild(document.createTextNode(cartItem));
+                cartItemsElement.appendChild(listItem);
+
+                // Clear the payment form fields
+                document.getElementById('tel').value = '';
+                document.getElementById('amount').value = '';
+            } else {
+                alert("Please fill in both productName and amount.");
+            }
+        }
+
+        function buyItems() {
+            var cartItemsElement = document.getElementById('cartItems');
+            var cartItems = cartItemsElement.getElementsByTagName('li');
+
+            if (cartItems.length > 0) {
+                var confirmation = confirm("Do you want to buy the items in your cart?");
+                if (confirmation) {
+                    alert("Thank you for your purchase!");
+                    // Clear the cart
+                    cartItemsElement.innerHTML = "";
+                }
+            } else {
+                alert("Your cart is empty. Add items before buying.");
+            }
+        }
+    </script>
+</body>
+</html>

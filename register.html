@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign up</title>
+    <link rel="stylesheet" href="form1.css">
+</head>
+<body>
+    <div class="sign-up">
+        <img src="imgs/user.256x256.png" alt="user">
+        <h1>Sign Up Now</h1>
+        <form id="signupForm">
+            <input type="text" class="input-box" id="firstName" placeholder="Enter your First name here" required>
+            <input type="text" class="input-box" id="surname" placeholder="Enter your Surname here" required>
+            <input type="email" name="email" class="input-box" id="email" placeholder="Enter your Email here" required>
+            <input type="password" name="password" class="input-box" id="password" placeholder="Enter your Password here" required>
+            <input type="password" class="input-box" id="confirmPassword" placeholder="Verify your Password here" required>
+            <p><span><input type="checkbox" required></span> Agree to the terms and conditions</p>
+            <button type="button" class="signup-btn" onclick="validateForm()"><a href="login.html">Sign Up</a></button>
+            <hr>
+            <p class="or">OR</p>
+            <p>Already have an account? <a href="login.html">Sign In</a></p>
+        </form>
+    </div>
+
+    <footer>
+        <div class="ft-container">
+          <p>for more information</p>
+          <div class="social-media">
+            <a href=""><img src="imgs/Facebook_White.png" alt=""></a>
+            <a href=""><img src="imgs/Twitter_White.png" alt=""></a>
+            <a href=""><img src="imgs/Instagram_White.png" alt=""></a>
+          </div>
+          <div class="apps">
+            <a href=""><img src="imgs/images.jpg" alt=""></a>
+            <a href=""><img src="imgs/apple1.jpg" alt=""></a>
+            <a href=""><img src="imgs/android1.jpg" alt=""></a>
+            <a href="indexx.html"><img src="imgs/momo.webp" alt=""></a>
+          </div>
+          <div class="additional-info">
+            <p>Email: popesir112@email.com</p>
+            <p>Phone: +250 787664007</p>
+          </div>
+          <p>&copy;SamDoes 2024</p>
+        </div>
+      </footer>
+
+    <script>
+        function validateForm() {
+            var firstName = document.getElementById("firstName").value;
+            var surname = document.getElementById("surname").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+
+            if (firstName === "" || surname === "" || email === "" || password === "" || confirmPassword === "") {
+                alert("All fields must be filled out");
+                return false;
+            }
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match");
+                return false;
+            }
+            alert("Form submitted successfully!");
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .product {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            background-color: white;
+        }
+
+        .cart {
+            border: 1px solid #333;
+            padding: 10px;
+            margin: 10px;
+            background-color: #eee;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Simple Shopping Cart</h1>
+    </header>
+
+    <div class="container">
+        <div class="product" onclick="addToCart('Product 1', 10.99)">
+            <h2>Product 1</h2>
+            <p>$10.99</p>
+        </div>
+        <div class="product" onclick="addToCart('Product 2', 15.99)">
+            <h2>Product 2</h2>
+            <p>$15.99</p>
+        </div>
+        <div class="product" onclick="addToCart('Product 3', 8.49)">
+            <h2>Product 3</h2>
+            <p>$8.49</p>
+        </div>
+    </div>
+
+    <div class="cart">
+        <h2>Shopping Cart</h2>
+        <ul id="cartItems"></ul>
+    </div>
+
+    <script>
+        function addToCart(productName, price) {
+            var quantity = prompt("Enter the quantity for " + productName + ":");
+
+            if (quantity !== null && !isNaN(quantity) && quantity > 0) {
+                var total = (price * quantity).toFixed(2);
+                var cartItem = productName + ' - $' + price + ' x ' + quantity + ' = $' + total;
+
+                var cartItemsElement = document.getElementById('cartItems');
+                var listItem = document.createElement('li');
+                listItem.appendChild(document.createTextNode(cartItem));
+                cartItemsElement.appendChild(listItem);
+            } else {
+                alert("Invalid quantity. Please enter a valid number greater than 0.");
+            }
+        }
+    </script>
+
+</body>
+</html>
